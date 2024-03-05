@@ -1,13 +1,14 @@
 import { ArrowRightCircleIcon } from '@heroicons/react/16/solid';
 import Image from 'next/image';
 import Link from 'next/link';
+import Logo from './ui/logo';
 
 export default function Home() {
 	return (
 		<main>
 			{/* logo */}
 			<div className='h-20 flex shrink-0 items-end rounded-lg bg-indigo-500 p-4 md:h-52'>
-				Logo
+				<Logo />
 			</div>
 
 			{/* Welcome Screen */}
@@ -37,14 +38,14 @@ export default function Home() {
 				md:px-28 md:py-12'
 				>
 					{/* image */}
-					{/* Shows image for medium and large devices
+					{/* Shows image for Laptop/Desktop
 					<Image 
 					src="src"
 					alt= "hero image" 
 					width={1000}
 					height={760}
 					className="hidden md:block"	*/}
-					{/* Shows image for small devices
+					{/* Shows image for mobile devices
 					<Image 
 					src="src"
 					alt= "hero image" 
