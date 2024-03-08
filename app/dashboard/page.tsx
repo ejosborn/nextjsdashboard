@@ -1,9 +1,9 @@
-import React from 'react';
 import { inter, roboto } from '../ui/fonts';
-import { Roboto } from 'next/font/google';
 import RevenueCharts from '../ui/dashboard/revenueCharts';
 import LatestInvoices from '../ui/dashboard/latestInvoices';
-const Dashboard = () => {
+import CardWrapper from '../ui/dashboard/cards';
+
+const Dashboard = async () => {
 	return (
 		<main>
 			<h1
@@ -13,10 +13,7 @@ const Dashboard = () => {
 			</h1>
 			{/* Dashboard Cards */}
 			<div className='grid gap-6 sm:grid-cols-2 lg:grid-cols-4 padding'>
-				<div className='w-55 h-44 rounded-md bg-gray-200'></div>
-				<div className='w-55 h-44 rounded-md bg-gray-200'></div>
-				<div className='w-55 h-44 rounded-md bg-gray-200'></div>
-				<div className='w-55 h-44 rounded-md bg-gray-200'></div>
+				<CardWrapper />
 			</div>
 
 			{/* Recent Revenue & Lastest Invoices */}
