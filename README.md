@@ -1,9 +1,29 @@
-This is a web application built using Nextjs and tailwindcss
+# Finances Application
+
+This is a Finances web application built using Nextjs, tailwindcss, and PostgreSQL to store the data. It is an application that
 
 ## Getting Started
 
-## Deploy on Vercel
+### Run My Program
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+First clone the repository:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+```bash
+git clone https://github.com/ejosborn/nextjsdashboard.git
+```
+
+Next,
+
+Run the development server:
+
+```bash
+npm run dev
+```
+
+### View my Deployed Program
+
+- I used Vercel to deploy my Finances Nextjs Program. Check it out [here](https://nextjsdashboard-six-nu.vercel.app/)!
+
+## Author
+
+- **Ellis Osborn** - [Ejosborn](https://github.com/ejosborn)
