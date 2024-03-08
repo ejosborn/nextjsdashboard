@@ -17,7 +17,8 @@ export default function RootLayout({
 		<html lang='en'>
 			<body className={`${roboto.className}`}>
 				{children}
-				<footer>Footer Area</footer>
+				{/* TODO: ADD FOOTER */}
+				{/* <footer>Footer Area</footer> */}
 			</body>
 		</html>
 	);
