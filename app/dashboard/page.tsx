@@ -2,6 +2,7 @@ import React from 'react';
 import { inter, roboto } from '../ui/fonts';
 import { Roboto } from 'next/font/google';
 import RevenueCharts from '../ui/dashboard/revenueCharts';
+import LatestInvoices from '../ui/dashboard/latestInvoices';
 const Dashboard = () => {
 	return (
 		<main>
@@ -21,7 +22,7 @@ const Dashboard = () => {
 			{/* Recent Revenue & Lastest Invoices */}
 			<div className='mt-6 grid grid-cols-1 gap-6 md:grid-cols-4 lg:grid-cols-8'>
 				<RevenueCharts />
-				<div>Latest Invoices</div>
+				<LatestInvoices />
 			</div>
 		</main>
 	);
