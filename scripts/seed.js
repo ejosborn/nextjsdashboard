@@ -3,7 +3,8 @@ const bcrypt = require('bcrypt');
 const {
 	users,
 	invoices,
-	customers
+	customers,
+	revenue
 } = require('../app/lib/placeholderdata');
 
 //seed users
@@ -45,12 +46,11 @@ async function seedUsers(client) {
 			users: insertedUsers
 		};
 	} catch (error) {
-		console.error('Error seeding invoices:', error);
+		console.error('Error seeding users:', error);
 		throw error;
 	}
 }
 
-//TODO: make db table for customers
 //seed customers
 async function seedCustomers(client) {
 	try {
@@ -127,7 +127,44 @@ async function seedInvoices(client) {
 			invoices: insertedInvoices
 		};
 	} catch (error) {
-		console.error('Error seeding users:', error);
+		console.error('Error seeding invoices:', error);
+		throw error;
+	}
+}
+
+async function seedRevenue(client) {
+	try {
+		await client.sql`CREATE EXTENSION IF NOT EXISTS "uuid-ossp"`;
+
+		const createTable = await client.sql`
+        CREATE TABLE IF NOT EXISTS revenue (
+          month VARCHAR(255) UNIQUE,
+		  revenue INT NOT NULL
+        );
+      `;
+
+		console.log('created revenue table');
+
+		const insertedRevenue = await Promise.all(
+			revenue.map(async (rev) => {
+				return client.sql`
+	  INSERT INTO revenue (month, revenue)
+	  VALUES (${rev.month}, ${rev.revenue})
+	  ON CONFLICT (month) DO NOTHING;
+	`;
+			})
+		);
+
+		console.log(
+			`Seeded ${insertedRevenue.length} months of revenue`
+		);
+
+		return {
+			createTable,
+			revenue: insertedRevenue
+		};
+	} catch (error) {
+		console.error('Error seeding revenue:', error);
 		throw error;
 	}
 }
@@ -137,6 +174,7 @@ async function main() {
 	await seedUsers(client);
 	await seedCustomers(client);
 	await seedInvoices(client);
+	await seedRevenue(client);
 
 	await client.end();
 }
