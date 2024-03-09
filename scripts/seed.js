@@ -94,6 +94,12 @@ async function seedCustomers(client) {
 //seed invoices
 async function seedInvoices(client) {
 	try {
+		//clears table so that duplicates are not able to happen
+		const deleteDupTable =
+			await client.sql`TRUNCATE TABLE invoices`;
+
+		console.log('Deleted Old Data in invoices table');
+
 		await client.sql`CREATE EXTENSION IF NOT EXISTS "uuid-ossp"`;
 
 		const createTable = await client.sql`
@@ -171,10 +177,10 @@ async function seedRevenue(client) {
 
 async function main() {
 	const client = await db.connect();
-	await seedUsers(client);
-	await seedCustomers(client);
+	//await seedUsers(client);
+	//await seedCustomers(client);
 	await seedInvoices(client);
-	await seedRevenue(client);
+	//await seedRevenue(client);
 
 	await client.end();
 }

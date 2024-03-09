@@ -36,6 +36,11 @@ const LatestInvoices = async () => {
 								<p
 									className={`${roboto.className} truncate text-sm font-medium text-black md:text-base`}
 								>
+									{invoice.date.toDateString()}
+								</p>
+								<p
+									className={`${roboto.className} truncate text-sm font-medium text-black md:text-base`}
+								>
 									{invoice.amount}
 								</p>
 							</div>

@@ -38,6 +38,7 @@ export type LatestInvoiceRaw = Omit<
 	'amount'
 > & {
 	amount: number;
+	date: Date;
 };
 
 export type InvoicesTable = {
