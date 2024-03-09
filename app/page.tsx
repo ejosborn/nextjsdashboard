@@ -20,7 +20,10 @@ export default function Home() {
 					<p className='text-xl text-gray-800 md:text-3xl md:leading-normal'>
 						<strong>Welcome to The Project</strong> This is
 						a financial dashboard project using Next.js
-						tailwindcss and postgreSQL
+						tailwindcss and postgreSQL. I'm currently
+						working on a sign-in/log-in page so please add
+						<strong> '/dashboard' </strong>to the URL to get
+						to the dashboard/landing page.
 					</p>
 					<Link
 						href='/login'

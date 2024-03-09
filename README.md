@@ -2,6 +2,14 @@
 
 This is a Finances web application built using Nextjs, tailwindcss, and PostgreSQL to store the data. It is an application that
 
+## Currently Building
+
+TODO:
+
+- Build LogIn Page
+- Build Sign-Up Page
+- Add footer
+
 ## Getting Started
 
 ### Run My Program
