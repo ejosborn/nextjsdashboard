@@ -18,6 +18,20 @@ export default function LogIn() {
 					Log In
 				</h1>
 				<LoginForm />
+				<div className='flex flex-row gap-4'>
+					<p className='text-sm text-'>
+						Don't have an account yet?
+					</p>
+					<Link
+						href='/signup'
+						className='flex items-center gap-5 self-start rounded-lg
+            					bg-indigo-500 px-4 py-2 text-sm text-white font-medium
+            					transition-colors hover:bg-indigo-400'
+					>
+						<span>Sign Up</span>
+						<UserPlusIcon className='2-5 md:w-6' />
+					</Link>
+				</div>
 			</div>
 		</main>
 	);

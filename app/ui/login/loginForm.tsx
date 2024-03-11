@@ -7,13 +7,13 @@ export default function LoginForm() {
 				name='email'
 				placeholder='email'
 				required
-			></input>
+			/>
 			<input
 				type='password'
 				name='password'
 				placeholder='Password'
 				required
-			></input>
+			/>
 			<button
 				className='flex items-center gap-5 self-start rounded-lg
             					bg-indigo-500 px-6 py-3 text-sm text-white font-medium

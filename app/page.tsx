@@ -39,6 +39,16 @@ export default function Home() {
 							<span>Login</span>
 							<ArrowRightCircleIcon className='w-5 md:w-6' />
 						</Link>
+
+						<Link
+							href='/signup'
+							className='flex items-center gap-5 self-start rounded-lg
+						bg-indigo-500 px-6 py-3 text-sm text-white font-medium
+						transition-colors hover:bg-indigo-400'
+						>
+							<span>Sign Up</span>
+							<UserPlusIcon className='w-5 md:w-6' />
+						</Link>
 					</div>
 				</div>
 
