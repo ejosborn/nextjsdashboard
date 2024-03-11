@@ -1,4 +1,7 @@
-import { ArrowRightCircleIcon } from '@heroicons/react/16/solid';
+import {
+	ArrowRightCircleIcon,
+	UserPlusIcon
+} from '@heroicons/react/16/solid';
 import Image from 'next/image';
 import Link from 'next/link';
 import Logo from './ui/logo';
@@ -20,20 +23,23 @@ export default function Home() {
 					<p className='text-xl text-gray-800 md:text-3xl md:leading-normal'>
 						<strong>Welcome to The Project</strong> This is
 						a financial dashboard project using Next.js
-						tailwindcss and postgreSQL. I'm currently
-						working on a Sign-in/Sign-up page so please add
+						Tailwindcss and PostgreSQL and TypeScript for
+						the tech stack. I'm currently working on a
+						Sign-in/Sign-up page so please add
 						<strong> '/dashboard' </strong>to the URL to get
 						to the dashboard/landing page.
 					</p>
-					<Link
-						href='/login'
-						className='flex items-center gap-5 self-start rounded-lg
+					<div className='flex flex-row gap-4'>
+						<Link
+							href='/login'
+							className='flex items-center gap-5 self-start rounded-lg
 						bg-indigo-500 px-6 py-3 text-sm text-white font-medium
 						transition-colors hover:bg-indigo-400'
-					>
-						<span>Login</span>
-						<ArrowRightCircleIcon className='w-5 md:w-6' />
-					</Link>
+						>
+							<span>Login</span>
+							<ArrowRightCircleIcon className='w-5 md:w-6' />
+						</Link>
+					</div>
 				</div>
 
 				<div
