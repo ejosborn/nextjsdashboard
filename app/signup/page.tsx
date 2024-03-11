@@ -14,12 +14,14 @@ export default function SignUp() {
 				<h1
 					className={`${roboto.className} mb-4 text-xl md:text-2xl`}
 				>
-					Sign Up!
 					<br />
+					Sign Up!
+				</h1>
+				<p className='text-sm'>
 					*** NOTE *** This feature will not be functional
 					until the feature of adding invoices and customers
 					have been created.
-				</h1>
+				</p>
 				<div>
 					<SignupForm />
 					<div className='flex flex-row gap-4'>

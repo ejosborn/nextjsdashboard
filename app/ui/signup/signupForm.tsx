@@ -6,17 +6,21 @@ const SignupForm = () => {
 					type='email'
 					name='email'
 					placeholder='Email'
-				/>
-				<input
-					type='confirm email'
-					name='confirm email'
-					placeholder='Confirm Email'
+					required
 				/>
 				<input
 					type='password'
 					name='Password'
 					placeholder='Password'
+					required
 				/>
+				<input
+					type='password'
+					name='Confirm Password'
+					placeholder='Confirm Password'
+					required
+				/>
+
 				<button
 					className='items-center self-start rounded-lg
 						bg-indigo-500 px-6 py-3 text-sm text-white font-medium
