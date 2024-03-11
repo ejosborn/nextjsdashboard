@@ -3,9 +3,9 @@ export default function LoginForm() {
 		<form className='flex flex-row gap-5 mb-4 ml-4'>
 			<input
 				className='rounded-md'
-				type='email'
-				name='email'
-				placeholder='email'
+				type='username'
+				name='username'
+				placeholder='Username'
 				required
 			/>
 			<input

@@ -3,9 +3,9 @@ const SignupForm = () => {
 		<div>
 			<form className='flex flex-row gap-5 mb-4 ml-4'>
 				<input
-					type='email'
-					name='email'
-					placeholder='Email'
+					type='username'
+					name='username'
+					placeholder='Username'
 					required
 				/>
 				<input
