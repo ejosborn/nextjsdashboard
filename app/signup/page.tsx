@@ -15,6 +15,10 @@ export default function SignUp() {
 					className={`${roboto.className} mb-4 text-xl md:text-2xl`}
 				>
 					Sign Up!
+					<br />
+					*** NOTE *** This feature will not be functional
+					until the feature of adding invoices and customers
+					have been created.
 				</h1>
 				<div>
 					<SignupForm />
@@ -23,12 +27,12 @@ export default function SignUp() {
 							Already have an account?
 						</p>
 						<Link
-							href='/signup'
+							href='/login'
 							className='flex items-center gap-5 self-start rounded-lg
             					bg-indigo-500 px-4 py-2 text-sm text-white font-medium
             					transition-colors hover:bg-indigo-400'
 						>
-							<span>Sign Up</span>
+							<span>Login</span>
 							<UserPlusIcon className='2-5 md:w-6' />
 						</Link>
 					</div>
